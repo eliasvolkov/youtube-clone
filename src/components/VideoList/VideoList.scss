@@ -11,6 +11,7 @@
 }
 .row {
   @include row-flex();
+  justify-content: center;
   @include xs-block {
     justify-content: center;
   }
