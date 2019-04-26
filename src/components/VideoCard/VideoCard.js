@@ -7,6 +7,7 @@ const VideoCard = () => {
       <div className={card.card}>
         <div className={card.img}>
           <img src="https://fakeimg.pl/213x118/" />
+          <div className={card.duration_max}>01:04:29</div>
         </div>
         <h3 className={card.headline}>
           My Linux Ubuntu Setup for Software Development
