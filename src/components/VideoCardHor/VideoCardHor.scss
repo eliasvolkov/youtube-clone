@@ -17,7 +17,7 @@
   }
 
   .img {
-    @include size(6);
+    @include size(7);
     @include size-md(8);
     @include size-sm(10);
     @include size-xs(24);
@@ -63,7 +63,7 @@
 
   .content {
     margin-left: 10px;
-    @include size(15);
+    @include size(12);
     @include size-md(12);
     @include size-sm(10);
     @include size-xs(20);
