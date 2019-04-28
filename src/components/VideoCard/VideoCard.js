@@ -1,19 +1,17 @@
 import React from "react";
 import card from "./VideoCard.scss";
 
-const VideoCard = () => {
+const VideoCard = ({ img, title, author, views, click }) => {
   return (
-    <div className={card.container}>
+    <div className={card.container} onClick={click}>
       <div className={card.card}>
         <div className={card.img}>
-          <img src="https://fakeimg.pl/213x118/" />
+          <img src={img} />
           <div className={card.duration_max}>01:04:29</div>
         </div>
-        <h3 className={card.headline}>
-          My Linux Ubuntu Setup for Software Development
-        </h3>
-        <div className={card.author}>ForrestKnight</div>
-        <div className={card.views}>просмотров 45 тыс.</div>
+        <h3 className={card.headline}>{title}</h3>
+        <div className={card.author}>{author}</div>
+        <div className={card.views}>просмотров {views} тыс.</div>
         <div className={card.time}> Неделю назад</div>
       </div>
     </div>
