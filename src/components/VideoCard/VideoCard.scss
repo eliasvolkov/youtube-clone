@@ -7,6 +7,7 @@
   @include size-sm(8);
   @include size-xs(24);
   margin-bottom: 30px;
+  cursor: pointer;
   .card {
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +18,9 @@
     .img {
       width: 100%;
       height: 117.5px;
+      @include xs-block {
+        height: 200px;
+      }
       margin-bottom: 5px;
       position: relative;
 
