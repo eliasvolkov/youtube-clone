@@ -1,27 +1,21 @@
 import React from "react";
 import card from "./VideoCardHor.scss";
 
-const VideoCardHor = () => {
+const VideoCardHor = ({ img, title, author, descr, click }) => {
   return (
-    <div className={card.container}>
+    <div className={card.container} onClick={click}>
       <div className={card.card}>
         <div className={card.img}>
-          <img src="https://i.ytimg.com/vi/OM_QJkD-Mr8/mqdefault.jpg" />
-          <div className={card.duration_min}>04:29</div>
+          <img src={img} />
         </div>
         <div className={card.content}>
           <div className={card.title}>
-            <h3 className={card.headline}>
-              My Linux Ubuntu Setup for Software Development
-            </h3>
-            <div className={card.info}>ForrestKnight</div>
+            <h3 className={card.headline}>{title}</h3>
+            <div className={card.info}>{author}</div>
             <div className={card.info}>45 тыс. просмотров</div>
             <div className={card.info}> Неделю назад</div>
           </div>
-          <div className={card.descr}>
-            {/* A look into my Ubuntu software development environment VM I use at
-            work as a software engineer. The OS is Ubuntu Linux ... */}
-          </div>
+          <div className={card.descr}>{`${descr.slice(0, 55)}...`}</div>
         </div>
       </div>
     </div>
