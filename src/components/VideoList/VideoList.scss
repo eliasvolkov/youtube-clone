@@ -7,11 +7,16 @@
   h4 {
     margin-bottom: 25px;
     text-transform: uppercase;
+    margin-left: 17%;
   }
 }
 .row {
   @include row-flex();
-  justify-content: center;
+  padding-left: 200px;
+  @include md-block {
+    padding-left: 10px;
+  }
+
   @include xs-block {
     justify-content: center;
   }
