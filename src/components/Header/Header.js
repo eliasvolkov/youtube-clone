@@ -3,6 +3,18 @@ import logoImg from "./di-U4RRNM.png";
 import modules from "./Header.scss";
 
 export default class Header extends Component {
+  state = {
+    title: ""
+  };
+
+  onSubmitForm = e => {
+    e.preventDefault();
+    this.props.find(this.state.title);
+  };
+
+  onChangeInput = e => {
+    this.setState({ title: e.target.value });
+  };
   render() {
     return (
       <React.Fragment>
@@ -12,12 +24,14 @@ export default class Header extends Component {
               <img className={modules.img} src={logoImg} alt="logo" />
             </div>
             <div className={modules.search}>
-              <form className={modules.form}>
+              <form className={modules.form} onSubmit={this.onSubmitForm}>
                 <div className={modules.inputGroup}>
                   <input
                     type="text"
                     className={modules.searchInput}
                     placeholder="Введите запрос"
+                    onChange={this.onChangeInput}
+                    value={this.state.title}
                   />
                   <button className={modules.searchBtn}>
                     <i className="fa fa-search" />
